@@ -1,0 +1,13 @@
+En CMD o windows PowerShell:
+
+node -v //revisa si tienes isntalado nodeJs, se descarga en nodejs.org
+
+npm -v //revisa si tienes instalado npm, durante la instalacion de node debes especificar que quieres instalar npm
+
+npm uninstall -g truffle //se recomienda desintalar versiones anteriores de truffle antes de instalar una nueva
+
+npm install -g truffle //instalara la ultima version de truffle
+
+cd *nombre carpeta* // selecciona la carpeta donde quieres guardar los archivos (tienes que crearla antes)
+
+truffle init //te descarga los archivos en la carpeta
