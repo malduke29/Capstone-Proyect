@@ -10,3 +10,9 @@
     * email tipo VARCHAR
     * usuario tipo VARCHAR
     * contrasena tipo VARCHAR
+    
+    ___________________________________________________________________________
+    
+ 7. Ir a la ruta Equipo/:C/Xampp/htdocs crear carpeta Empleadores y descomprimir el archivo "empleadores.zip" ahí
+ 
+ ¡Ahora se puede probar el código!
