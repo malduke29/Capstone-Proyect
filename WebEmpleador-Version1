@@ -1,0 +1,12 @@
+1. Instalar XAMPP
+2. Darle Start a: Apache y MSQL
+3. Entrar a "http://localhost/phpmyadmin"
+4. Crear BASE DE DATOS llamada "empleadores"
+5. Crear tabla dentro de dicha base de datos llamada "data"
+6. Dentro de esa tabla crear los siguientes campos (en el mismo orden):
+    * nombre tipo VARCHAR
+    * apellido tipo VARCHAR
+    * empresa tipo VARCHAR
+    * email tipo VARCHAR
+    * usuario tipo VARCHAR
+    * contrasena tipo VARCHAR
