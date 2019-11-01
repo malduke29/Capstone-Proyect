@@ -1,6 +1,6 @@
 Version 2:
 
-Se agregaron las funciones del documento Capstone-Proyect/Node/           al archivo index.js
+Se agregaron las funciones del documento Capstone-Proyect/Node/LinkEnMail.js al archivo index.js
 con esto se espera poder enviar dentro del mail un link para los usuarios que revisen el correo en un dispositivo mobile.
 
 
