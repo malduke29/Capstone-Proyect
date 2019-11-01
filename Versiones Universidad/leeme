@@ -1,0 +1,57 @@
+1. Hay que instalar bootstrap donde se crearan 2 carpetas (CSS y JS). 
+2. En la carpeta CSS tendràn una carpeta llamada 'bootstrap.css', cambienla por la carpeta que està en Versiones Universidad con el mismo nombre.
+3. Tienen que instalar node_modules por el terminal
+4. Una vez hecho todo eso, descarguen la última versiòn de universidad y copien las carpetas 'css, 'js', 'images' y 'node_modules'.
+5. Copiar esta carpeta en htdocs (previamente deben haber instalado XAMPP)
+la ruta es: opt/lampp/htdocs/'(nombre de la carpeta que crearon)'
+
+----------------------------------------------------------------------------------------
+
+Se creó una base de datos en phpmyadmin llamada 'universidad',
+con las siguientes tablas
+
+1. 'alumno'
+COLUMNAS:
+'id'
+'nombre'
+'email'
+'password'
+
+2. 'certificado'
+COLUMNAS:
+'id'
+'tipo_de_certificado'
+'nombre_titulo'
+'fecha'
+'estado'
+'envio_email'
+'id_funcionario'
+'rut_alumno'
+
+3. 'funcionario'
+COLUMNAS:
+'id'
+'nombre'
+'apellido'
+'email'
+'password'
+
+4. 'solicitud'
+COLUMNAS:
+'id'
+'universidad'
+'tipo_de_certificado'
+'estado'
+'rut_alumno'
+
+5. 'users'
+COLUMNAS:
+'nombre'
+'apellido'
+'empresa'
+'rubro'
+'email'
+'usuario'
+'password'
+
+
