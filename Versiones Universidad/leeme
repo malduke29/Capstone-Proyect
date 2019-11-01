@@ -1,3 +1,5 @@
+
+INSTRUCCIONES PREVIAS
 1. Hay que instalar bootstrap donde se crearan 2 carpetas (CSS y JS). 
 2. En la carpeta CSS tendràn una carpeta llamada 'bootstrap.css', cambienla por la carpeta que està en Versiones Universidad con el mismo nombre.
 3. Tienen que instalar node_modules por el terminal
@@ -6,9 +8,10 @@
 la ruta es: opt/lampp/htdocs/'(nombre de la carpeta que crearon)'
 
 ----------------------------------------------------------------------------------------
+BASE DE DATOS
+Nombre de la BD en phpmyadmin: 'universidad',
 
-Se creó una base de datos en phpmyadmin llamada 'universidad',
-con las siguientes tablas
+Con las siguientes tablas:
 
 1. 'alumno'
 COLUMNAS:
@@ -53,5 +56,14 @@ COLUMNAS:
 'email'
 'usuario'
 'password'
+
+-------------------------------------------------------------------------------------------------------------------
+CÒMO HACER CORRER EL ARCHIVO
+1. Abrir el terminal
+2. cd /opt
+3. sudo node lampp/htdocs/'(nombre de la carpeta que crearon)'/index.js
+4. Les arrojarà un link del ngrok, (mientras estamos sin servidor) PEGAR este link y pegarlo en enviar_email.php donde hay un link igual (cambiarlo por el que hay)
+5. Guardar
+6. Ahora si abren localhost/'(nombre de la carpeta que crearon)'/Visualizar.php podran darl clic en enviar certificado y se enviarà el còdigo QR al correo. (Puede comprobar que esto suceda desde la terminal)
 
 
