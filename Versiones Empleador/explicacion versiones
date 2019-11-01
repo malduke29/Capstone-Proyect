@@ -1,0 +1,11 @@
+Versiòn 1
+
+* Se terminò la estètica de la web
+* Se logra enviar el email al alumno en cuestiòn, este tiene que abrir un link donde le aparece el codigo QR, lo escanea y recibe su credencial.
+FALTA:
+* Terminar el buscador por rut
+* Agregar còdigo de pepe para aceptar la notificaciòn push sin la necesidad de escanear (funciona solo para versiòn mobile??: PEPE RESPONDER ESTO PORFI)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Versiòn 2
