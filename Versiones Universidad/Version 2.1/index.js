@@ -33,7 +33,7 @@ var transporter = nodemailer.createTransport({
   }
  });  
 
-const htmlTemplate = (qrImageUri, mobileUrl,Destino) =>`<p>Sr(a) ${Destino}:</p><p>Por medio del presente, confirmamos que la emisión de su certificado fue exitosa, se adjunta el codigo QR para ser escaneado con su aplicación Uport. No responda este e-mail, ya que, es generado automáticamente.</p><p>Si no sabe como escanear el código QR con su aplicación Uport puede seguir <a href="">este</a> tutorial.</p><div> <img src="${qrImageUri}" /></div><div><a href="${mobileUrl}">Click here if on mobile</a></div><p>Atentamente, le saluda,<br/>Secretaría General.</p>`          `</html>`
+const htmlTemplate = (qrImageUri, mobileUrl,Destino) =>`<p>Sr(a) ${Destino}:</p><p>Por medio del presente, confirmamos que la emisión de su certificado fue exitosa, se adjunta el codigo QR para ser escaneado con su aplicación Uport. No responda este e-mail, ya que, es generado automáticamente.</p><p>Si no sabe como escanear el código QR con su aplicación Uport puede seguir <a href="">este</a> tutorial.</p><div> <img src="${qrImageUri}" /></div><div><a href="${mobileUrl}">Click here if on mobile</a></div><p>Atentamente, le saluda,<br/>Secretaría General.</p>`
 let endpoint = ''
 const messageLogger = (message, title) => {
  const wrapTitle = title ? ` \n ${title} \n ${'-'.repeat(60)}` : ''
