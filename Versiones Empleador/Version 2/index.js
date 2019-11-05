@@ -33,6 +33,14 @@ var transporter = nodemailer.createTransport({
   }
  }); 
 
+const htmlTemplate = (qrImageUri, mobileUrl) =>`<div><img src="${qrImageUri}" /></div><div><a href="${mobileUrl}">Click aqui si se esta en celular.</a></div>`
+let endpoint = ''
+const messageLogger = (message, title) => {
+ const wrapTitle = title ? ` \n ${title} \n ${'-'.repeat(60)}` : ''
+ const wrapMessage = `\n ${'-'.repeat(60)} ${wrapTitle} \n`
+ console.log(wrapMessage)
+ console.log(message)
+} 
 
 app.get('/', (req, res) => {
 var url_parts = urllib.parse(req.url, true);
@@ -56,8 +64,7 @@ console.log(query.tipo_de_certificado);
             '<body>'+
       '<p>Sr(a) '+query.nombre_alumno+ ':</p>'+
       '<p>Por medio del presente, le comunicamos que la empresa IBM está solicitando su '+query.tipo_de_certificado+'. Se adjunta el código QR para ser escaneado con su aplicación Uport. No responda este e-mail, ya que, es generado automáticamente.</p>'+
-      '<p>Si no sabe como escanear el código QR con su aplicación Uport puede seguir <a href="">este</a> tutorial.</p>'+ 
-       '<p><a href='+endpoint+'>AQUI.</a></p>'+
+       htmlTemplate(qr,uri)+
       '<p>Atentamente, le saluda,<br/>Secretaría General. </p>'+
             '</body>'+
             '</html>'
