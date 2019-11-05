@@ -1,0 +1,47 @@
+IMPORTANTE: Para decodificar archivos JWT en php
+
+
+1. Before downloading and installing Composer, first update the packages index and install the necessary requirements:
+
+$sudo apt update
+$sudo apt install wget php-cli php-zip unzip
+
+2. Now that we have php cli installed on our machine, we can download the composer installer with:
+$php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+//NOTA: The command above will download the composer-setup.php file in the current working directory.
+
+3. Next, we need to verify the data integrity of the script by comparing the script SHA-384 hash with the latest installer hash found on the Composer Public Keys / Signatures page.
+We will use the following wget command to download the expected signature of the latest Composer installer from the Composer’s Github page and store it in a variable named HASH:
+$ HASH="$(wget -q -O - https://composer.github.io/installer.sig)"
+
+If the hashes match, you will see the following output:
+Output
+Installer verified
+
+If the hashes don’t match you will see Installer corrupt. In this case you will need to redownload the Composer installation script and double check the value of the $HASH variable with echo $HASH. Once the installer is verified, you can continue with the next step.
+
+4. The following command will install Composer in the /usr/local/bin directory:
+$sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+All settings correct for using Composer
+Downloading...
+
+Composer (version 1.8.5) successfully installed to: /usr/local/bin/composer
+Use it: php /usr/local/bin/composer
+
+**** The composer is installed as a system-wide command and it will be available for all users.
+
+5. The last step is to verify the installation:
+$ composer
+
+______
+/ ____/___  ____ ___  ____  ____  ________  _____
+/ /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 1.8.5 2019-04-09 17:46:47
+
+Usage:
+    command [options] [arguments]
