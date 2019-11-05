@@ -33,7 +33,7 @@ var transporter = nodemailer.createTransport({
   }
  });  
 
-const htmlTemplate = (qrImageUri, mobileUrl,Destino) =>`<p>Sr(a) ${Destino}:</p><p>Por medio del presente, confirmamos que la emisión de su certificado fue exitosa, se adjunta el codigo QR para ser escaneado con su aplicación Uport. No responda este e-mail, ya que, es generado automáticamente.</p><p>Si no sabe como escanear el código QR con su aplicación Uport puede seguir <a href="">este</a> tutorial.</p><div> <img src="${qrImageUri}" /></div><div><a href="${mobileUrl}">Click here if on mobile</a></div><p>Atentamente, le saluda,<br/>Secretaría General.</p>`
+const htmlTemplate = (qrImageUri, mobileUrl) =>`<div><img src="${qrImageUri}" /></div><div><a href="${mobileUrl}">Click aqui si se esta en celular.</a></div>`
 let endpoint = ''
 const messageLogger = (message, title) => {
  const wrapTitle = title ? ` \n ${title} \n ${'-'.repeat(60)}` : ''
@@ -64,7 +64,16 @@ app.get('/', (req,res)=> {
     from: 'registrosacademicos.uai@gmail.com',
     to: query.email_alumno,
     subject: 'Emisión de su Certificado de Título',
-    html: htmlTemplate(qr,uri,query.nombre_alumno)
+    html:'<!DOCTYPE html>'+
+	        '<html>'+
+	        '<body>'+
+		'<p>Sr(a) '+query.nombre_alumno+':</p>'+
+		'<p>Por medio del presente, confirmamos que la emision de su certificado fue exitosa, se adjunta el codigo QR para ser escaneado con su aplicacion Uport. No responda este e-mail, ya que, es generado automaticamente.</p>'+
+	        htmlTemplate(qr,uri)+
+		'<p></p>'+
+		'<p>Atentamente, le saluda,<br/>Secretaria General. </p>'+
+	        '</body>'+
+	        '</html>'
    };
 
    transporter.sendMail(mailOptions,function(error,info){
