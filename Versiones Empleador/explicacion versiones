@@ -9,3 +9,6 @@ FALTA:
 -------------------------------------------------------------------------------------------------------------------------------
 
 Versiòn 2
+* Se logra enviar el email al alumno desde la web empleador. 
+PROBLEMA:
+* No lee las query en la linea 42 de index.js. 
