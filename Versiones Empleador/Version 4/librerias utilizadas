@@ -1,0 +1,4 @@
+https://github.com/firebase/php-jwt
+
+se instalò en la consola: composer require firebase/php-jwt
+Està correctamente instalado cuando se crea una carpeta llamada 'vendor'
