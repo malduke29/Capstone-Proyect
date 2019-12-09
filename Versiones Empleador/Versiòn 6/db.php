@@ -1,13 +1,13 @@
 <?php
 class DB {
 	static $user = "root";
-	static $pass = "";
+	static $pass = "Capstone789+";
 	static $host= "localhost";
 	static $db = "universidad";
 	static $conn = null; 
 
 	static function init() {
-		DB::$conn = mysqli_connect(DB::$host, DB::$user, DB::$pass);
+		DB::$conn = mysqli_connect(DB::$host, DB::$user, DB::$pass) or die ('connected failed');
 		mysqli_select_db(DB::$conn, DB::$db);
 	}
 
